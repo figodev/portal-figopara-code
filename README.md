@@ -51,28 +51,7 @@ This style guide is mostly based on the standards that are currently prevalent i
       }
     }
     ```
-
-    And if you don’t have state or refs, prefer normal functions (not arrow functions) over classes:
-
-    ```jsx
-    // bad
-    class Listing extends React.Component {
-      render() {
-        return <div>{this.props.hello}</div>;
-      }
-    }
-
-    // bad (relying on function name inference is discouraged)
-    const Listing = ({ hello }) => (
-      <div>{hello}</div>
-    );
-
-    // good
-    function Listing({ hello }) {
-      return <div>{hello}</div>;
-    }
-    ```
-
+    
 ## Mixins
 
   - [Do not use mixins](https://facebook.github.io/react/blog/2016/07/13/mixins-considered-harmful.html).
